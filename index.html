@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <title>BS 名片</title>
+  <style>
+    html,
+    body{
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .container-fluid{
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+    }
+    .logo{
+      height: 34%;
+    }
+    .descript{
+      height: 66%;
+    }
+    .img{
+      background: url(./images/umbrella.jpg)no-repeat center center/contain;
+    }
+    @media(min-width:992px) {
+      .container-fluid{
+        width: 75%;
+        height: 65%;
+        margin: auto;
+        box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .logo{
+        height: 100%;
+      }
+      .descript{
+        height: 100%;
+      }
+      .all:before{
+        content: '';
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: url('./images/mold2.png')no-repeat center/cover;
+        
+        position: absolute;
+        top: -15%;
+        right: -5%;
+        transform: rotate(45deg);
+        z-index: 99;
+      }
+      .h2{
+        font-size: 2.7rem;
+      }
+      .h4{
+        font-size: 1.7rem;
+      }
+      .h5{
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="all container-fluid">
+    <div class="row m-0 h-100">
+      <!-- 圖片 -->
+      <div class="logo col-lg-4 p-0" style="background: black;">
+        <div class="img h-100 w-100 text-center"></div>
+      </div>
+      
+      <!-- 文字內容 -->
+      <div class="descript col-lg-8 p-0">
+        <div class="row flex-column h-100">
+          <!-- 姓名 -->
+          <div class="col d-flex mx-auto w-75">
+            <div class="row flex-column mx-auto mt-auto mx-md-auto mx-lg-0 mt-lg-auto pb-2">
+              <div class="col p-0">
+                <p class="h4 mb-0"><small>Founder</small></p>
+              </div>
+              <div class="col p-0">
+                <p class="h2 mb-0">Ozwell E Spencer</p>  
+              </div>
+              <div class="col p-0">
+                <p class="h4 mb-0"><small>Umbrella Corporation</small></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 聯絡方式 -->
+          <div class="col d-flex mx-auto w-75">
+            <div class="row flex-column mx-auto mb-auto mx-md-auto mx-lg-0 mb-lg-auto pt-2">
+              <div class="col p-0">
+                <p class="h5 mb-0"><small>Add: Raccoon City, Arklay Mountains</small></p>
+              </div>
+              <div class="col p-0">
+                <p class="h5 mb-0"><small>Tel: 1968-2003</small></p>
+              </div>
+              <div class="col p-0">
+                <p class="h5 mb-0"><small>E-mail: umbrellacop@gmail.com</small></p>
+              </div>
+              <div class="col p-0">
+                <p class="h5 mb-0"><small>Website: www.umbrellacorp.net</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
